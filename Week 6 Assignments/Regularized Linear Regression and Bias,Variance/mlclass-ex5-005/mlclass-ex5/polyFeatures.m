@@ -15,18 +15,11 @@ X_poly = zeros(numel(X), p);
 %
 % 
 
-m = size(X,1);
 
-for i=1:m
+power_vector = [1:p];
+X_repmat_matrix = repmat(X, 1, p);
 
-    poly_feature = zeros(p, 1);
-
-    for j=1:p
-        poly_feature(j) =  X(i).^j;
-    end
-
-    X_poly(i, :) = poly_feature;
-end
+X_poly = X_repmat_matrix .^ power_vector;
 
 
 
