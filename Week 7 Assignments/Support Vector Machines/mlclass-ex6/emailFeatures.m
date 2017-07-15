@@ -49,10 +49,14 @@ x = zeros(n, 1);
 %
 
 
-for i=1:size(word_indices)
-    x(word_indices(i)) = 1;
-end
+%for i=1:size(word_indices)
+%    x(word_indices(i)) = 1;
+%end
+%Replace with shorter cycles - just cycle through required values instead of all possible
 
+for i = word_indices;
+  x(i) = 1;
+end
 
 
 
