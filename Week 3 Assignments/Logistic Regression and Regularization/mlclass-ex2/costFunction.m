@@ -28,6 +28,18 @@ grad = (1 / m) * sum( X .* repmat((sigmoid(X*theta) - y), 1, size(X,2)) );
 
 
 
+% why repmat needed we are getting same out put right
+
+% sum(X.*repmat((sigmoid(X*test_theta)-y),1, size(X,2)))  
+%ans =
+
+%     4.2903   256.6234   264.6797
+
+%>> sum(X.*(sigmoid(X*test_theta) - y))
+%ans =
+
+ %    4.2903   256.6234   264.6797
+
 
 % =============================================================
 
