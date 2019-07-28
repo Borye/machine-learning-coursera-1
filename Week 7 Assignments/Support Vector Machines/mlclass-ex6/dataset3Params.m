@@ -34,7 +34,7 @@ for C_test = [0.01 0.03 0.1 0.3 1, 3, 10 30]
         predictions = svmPredict(model, Xval);
         prediction_error = mean(double(predictions ~= yval));
 
-        results(errorRow,:) = [C_test, sigma_test, prediction_error];     
+        results(errorRow,:) = [C_test sigma_test prediction_error];     
     end
 end
 
